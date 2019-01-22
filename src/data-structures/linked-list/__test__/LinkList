@@ -1,0 +1,42 @@
+//on my way
+
+function  Node(e) {
+    this.element = e;
+    this.next = null;
+}
+
+function Llist() {
+    this.head = new Node('head')
+    this.find = find;
+    this.insert = insert;
+    this.display = display;
+    // this.remove = remove;
+}
+
+function find(e) {
+  let cur = this.head
+  while (cur.element != e){
+    cur = cur.next
+  }
+  return cur
+}
+function insert(e,te) {
+  let newNode = new Node(e)
+  let tarNode = this.find(te);
+  newNode.next = tarNode.next
+  tarNode.next = newNode;
+}
+
+function  display() {
+    var c = this.head
+    while (! (c.next==null)){
+      console.log(c.next.element)
+      c = c.next
+    }
+}
+
+aa = new Llist()
+aa.insert('a','head')
+aa.insert('b','a')
+aa.insert('c','b')
+aa.display()
